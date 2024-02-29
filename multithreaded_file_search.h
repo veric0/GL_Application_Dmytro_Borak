@@ -13,7 +13,7 @@
 
 namespace fs = std::filesystem;
 
-void searchForFile(const std::string &fileName, const fs::path &currentPath, std::vector<fs::path> &foundPaths,
-                   unsigned int maxThreads = std::thread::hardware_concurrency());
+std::vector<fs::path>  searchForFile(const std::string &fileName, const fs::path &currentPath,
+                                     unsigned int maxThreads = std::thread::hardware_concurrency());
 
 #endif //GL_DMYTRO_BORAK_MULTITHREADED_FILE_SEARCH_H

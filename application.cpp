@@ -49,8 +49,7 @@ int main() {
     std::cout << "Directory path: " << directoryPath << std::endl;
     std::cout << "File name: " << fileName << std::endl;
 
-    std::vector<fs::path> foundPaths;
-    searchForFile(fileName, directoryPath, foundPaths);
+    std::vector<fs::path> foundPaths = searchForFile(fileName, directoryPath);
 
     if (!foundPaths.empty()) {
         std::cout << "Found " << foundPaths.size() << " occurrences of " << fileName << ":\n";

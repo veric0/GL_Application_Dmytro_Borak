@@ -7,8 +7,9 @@
 void searchInSubDirectory(const std::string &fileName, const fs::path &currentPath, std::vector<fs::path> &foundPaths,
                           std::atomic<bool> &stopSearch);
 
-void searchForFile(const std::string &fileName, const fs::path &currentPath, std::vector<fs::path> &foundPaths,
-                   unsigned int maxThreads) {
+// todo fix: infinite links in /usr/bin/X11
+std::vector<fs::path> searchForFile(const std::string &fileName, const fs::path &currentPath, unsigned int maxThreads) {
+    std::vector<fs::path> foundPaths;
     std::atomic<bool> stopSearch(false);
 
     std::vector<std::thread> threads;
@@ -34,6 +35,7 @@ void searchForFile(const std::string &fileName, const fs::path &currentPath, std
     for (auto &thread: threads) {
         thread.join();
     }
+    return std::move(foundPaths);
 }
 
 void searchInSubDirectory(const std::string &fileName, const fs::path &currentPath, std::vector<fs::path> &foundPaths,
