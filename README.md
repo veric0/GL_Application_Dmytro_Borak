@@ -1,25 +1,36 @@
 # Multithreaded File Search
 
-Бібліотека для багатопоточного пошуку файлу у вказаній директорії.
+Library for multithreading file search in a specified directory.
 
-Компіляція бібліотеки та Application відбувається окремо в CMakeLists.txt
+Compilation of the library and application is done separately in `CMakeLists.txt`.
 
-## Компіляція
+![task requirements](task_requirements.jpg)
 
-1. Створіть папку для зберігання скомпільованого проекту:
+## Compilation
 
-```mkdir build```
+1. Create a folder to store the compiled project:
 
-```cd build```
+    ```sh
+    mkdir build
+    cd build
+    ```
 
-2. Виконайте cmake для побудови проекту:
-```cmake ..```
+2. Run cmake to build the project:
 
-3. Зіберіть проект за допомогою make (або іншої утиліти збирання, наприклад, ninja):
-```make```
+    ```sh
+    cmake ..
+    ```
 
-## Використання
+3. Build the project using make:
 
-Щоб скористатися програмою, запустіть виконавчий файл, передавши йому шлях до директорії та ім'я файлу, яке потрібно знайти:
+    ```sh
+    make
+    ```
 
-```./GL_Application_Dmytro_Borak```
+## Usage
+
+To use the program, run the executable file located in the `build` folder, then input directory path and file name to search:
+
+```sh
+./GL_Application_Dmytro_Borak
+```
