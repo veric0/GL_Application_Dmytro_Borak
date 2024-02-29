@@ -5,11 +5,11 @@
 int main() {
 
     unsigned int cores = std::thread::hardware_concurrency();
-    std::cout << "Number of cores (= threads for search): " << cores << std::endl;
+    std::cout << "Number of cores ( =threads for search): " << cores << std::endl;
 
 //    std::string directoryPath = "/";
     std::string directoryPath = "/home/dima/CLionProjects";
-    std::string fileName = "main.cpp";
+    std::string fileName = "GL_Application_Dmytro_Borak";
 
     std::vector<fs::path> foundPaths;
     searchForFile(fileName, directoryPath, foundPaths);
