@@ -6,6 +6,10 @@ Compilation of the library and application is done separately in `CMakeLists.txt
 
 ![task requirements](task_requirements.jpg)
 
+## Requirements
+
+Use C++17 version and cmake 3.22 or higher.
+
 ## Compilation
 
 1. Create a folder to store the compiled project:
